@@ -1,0 +1,15 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+
+
+*** Testcases ***
+Log in to facebook
+	Open Browser    http://www.facebook.com
+	Input Text    email    chamanow_book@hotmail.com
+	Input Text    pass    Welcome1ch@tichon
+	Click Button    เข้าสู่ระบบ
+	Wait Until Page Contains    Chonticha Reangthong
+	Close Browser
+*** Keywords ***

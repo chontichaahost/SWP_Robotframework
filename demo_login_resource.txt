@@ -1,0 +1,14 @@
+*** Variables ***
+${LOGIN URL}    http://localhost:7272/html/
+
+
+*** Keywords ***
+
+ไปที่หน้า login เข้าระบบตัวอย่าง
+	Open Browser    ${LOGIN URL}
+
+กรอกข้อมูลของผู้ใช้งาน
+	[Arguments]    ${username}    ${password}
+	Input Text    username_field    ${username}
+	Input Text    password_field    ${password}
+	Click Button    LOGIN
